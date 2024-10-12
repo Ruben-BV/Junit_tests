@@ -1,12 +1,15 @@
 package org.factoriaf5.junit_tests;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class Example {
 
     // 1. Método para sumar dos números
     public int sumar(int a, int b) {
         return a + b;
     }
-
+    
     // 2. Método que lanza una excepción si el argumento es negativo
     public boolean checkPositivo(int numero) {
         if (numero < 0) {
