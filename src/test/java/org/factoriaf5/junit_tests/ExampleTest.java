@@ -2,9 +2,10 @@ package org.factoriaf5.junit_tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-// import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 // import org.junit.jupiter.api.BeforeEach;
 
 // import java.util.Arrays;
@@ -14,10 +15,16 @@ import org.junit.jupiter.api.Test;
 
 public class ExampleTest {
     
+    private Example example;
+
+    @BeforeEach
+    public void init() {
+        this.example = new Example();
+    }
+
     @Test
     public void testSumar() {
 
-        Example example = new Example();
         int num1 = 35;
         int num2 = 79;
 
