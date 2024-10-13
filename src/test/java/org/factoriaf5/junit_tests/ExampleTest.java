@@ -90,4 +90,12 @@ public class ExampleTest {
         assertEquals(6,result);
     }
 
+    @Test
+    public void factorialNegativeNumber() {
+        int number = -4;
+        assertThrows(IllegalArgumentException.class, () -> {
+            example.factorial(number);
+        });
+    }
+
 }
