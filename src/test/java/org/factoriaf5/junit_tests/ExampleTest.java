@@ -98,4 +98,11 @@ public class ExampleTest {
         });
     }
 
+    @Test
+    public void esprimo() {
+        int number = 5;
+        boolean result = example.esPrimo(number);
+        assertTrue(result);
+    }
+
 }
