@@ -156,4 +156,16 @@ public class ExampleTest {
         });
     }
 
+    @Test
+    public void testCalcularMediaListaNull() {
+        List<Integer> list = null;
+        assertThrows(IllegalArgumentException.class, () -> {
+            example.calcularMedia(list);
+        });
+    }
+
+    
+
+
+
 }
