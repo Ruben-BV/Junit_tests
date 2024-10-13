@@ -63,19 +63,25 @@ public class ExampleTest {
     public void contieneElemento() {
         List<String> list = Arrays.asList("Element1", "Element2", "Element3");
         String element = "Element2";
-        
-        // Verificar que el elemento está en la lista
-        assertTrue(example.contieneElemento(list, element));
-        }
+        boolean result = example.contieneElemento(list, element);
+        assertTrue(result);
+    }
 
-        @Test
-        public void contieneElementoFalse() {
-            List<String> list = Arrays.asList("Element1", "Element2", "Element3");
-            String element = "Element4";
-            
-            // Verificar que el elemento está en la lista
-            assertFalse(example.contieneElemento(list, element));
-            }
+    @Test
+    public void contieneElementoFalse() {
+        List<String> list = Arrays.asList("Element1", "Element2", "Element3");
+        String element = "Element4";
+
+        boolean result = example.contieneElemento(list, element);
+        assertFalse(result);
+    }
+
+    @Test
+    public void revertirCadena() {
+        String string = "cat";
+        String result = example.revertirCadena(string);
+        assertEquals("tac",result);
+    }
         
     
 
