@@ -67,6 +67,15 @@ public class ExampleTest {
         // Verificar que el elemento está en la lista
         assertTrue(example.contieneElemento(list, element));
         }
+
+        @Test
+        public void contieneElementoFalse() {
+            List<String> list = Arrays.asList("Element1", "Element2", "Element3");
+            String element = "Element4";
+            
+            // Verificar que el elemento está en la lista
+            assertFalse(example.contieneElemento(list, element));
+            }
         
     
 
