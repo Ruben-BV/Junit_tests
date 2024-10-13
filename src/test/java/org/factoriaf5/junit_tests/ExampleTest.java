@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 // import java.util.Collections;
 import java.util.List;
@@ -129,6 +130,15 @@ public class ExampleTest {
 
         assertEquals("Listo después de retraso", result);
         assertTrue(duracion >= 5000);
+    }
+
+    @Test
+    public void testConvertirAString() {
+        List<Integer> list = Arrays.asList(1,2,3);
+
+        List<String> expected = Arrays.asList("1","2","3");
+        List<String> result = example.convertirAString(list);
+        assertEquals(expected, result);
     }
 
 }
