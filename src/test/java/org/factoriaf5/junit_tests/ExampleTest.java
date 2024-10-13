@@ -2,13 +2,13 @@ package org.factoriaf5.junit_tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-// import org.apache.tomcat.util.digester.ArrayStack;
+import org.apache.tomcat.util.digester.ArrayStack;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-// import java.util.Collections;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -164,8 +164,18 @@ public class ExampleTest {
         });
     }
 
+    @Test
+    public void testConvertirListaAString() {
+        List<String> list = Arrays.asList("1","2","3");
+        String result = example.convertirListaAString(list);
+        assertEquals("1,2,3", result);
+    }
     
 
-
-
+    @Test
+    public void testConvertirListaAString2() {
+        List<String> list = Arrays.asList("1",null,"3");
+        String result = example.convertirListaAString(list);
+        assertEquals("1,NULL,3", result);
+    }
 }
