@@ -148,4 +148,12 @@ public class ExampleTest {
         assertEquals(6, result);
     }
 
+    @Test
+    public void testCalcularMediaListaVacia() {
+        List<Integer> list = Arrays.asList();
+        assertThrows(IllegalArgumentException.class, () -> {
+            example.calcularMedia(list);
+        });
+    }
+
 }
