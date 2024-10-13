@@ -54,4 +54,11 @@ public class ExampleTest {
         });
     }
 
+    @Test
+    public void contarLetrasA() {
+        String string = "animal";
+        int result = example.contarLetrasA(string);
+        assertEquals(2, result);
+    }
+
 }
