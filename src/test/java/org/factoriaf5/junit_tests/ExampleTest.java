@@ -42,11 +42,16 @@ public class ExampleTest {
     public void checkPositivo() {
 
         int number = 5;
-
         boolean result = example.checkPositivo(number);
-
         assertTrue(result);
+    }
 
+    @Test
+    public void checkPositivoError() {
+        int number = -4;
+        assertThrows(IllegalArgumentException.class, () -> {
+            example.checkPositivo(number);
+        });
     }
 
 }
