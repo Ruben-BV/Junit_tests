@@ -37,7 +37,7 @@ public class ExampleTest {
     }
 
     @Test
-    public void checkPositivo() {
+    public void testCheckPositivo() {
 
         int number = 5;
         boolean result = example.checkPositivo(number);
@@ -45,7 +45,7 @@ public class ExampleTest {
     }
 
     @Test
-    public void checkPositivoError() {
+    public void testCheckPositivoError() {
         int number = -4;
         assertThrows(IllegalArgumentException.class, () -> {
             example.checkPositivo(number);
@@ -53,14 +53,14 @@ public class ExampleTest {
     }
 
     @Test
-    public void contarLetrasA() {
+    public void testContarLetrasA() {
         String string = "animal";
         int result = example.contarLetrasA(string);
         assertEquals(2, result);
     }
 
     @Test
-    public void contieneElemento() {
+    public void testContieneElemento() {
         List<String> list = Arrays.asList("Element1", "Element2", "Element3");
         String element = "Element2";
         boolean result = example.contieneElemento(list, element);
@@ -68,7 +68,7 @@ public class ExampleTest {
     }
 
     @Test
-    public void contieneElementoFalse() {
+    public void testContieneElementoFalse() {
         List<String> list = Arrays.asList("Element1", "Element2", "Element3");
         String element = "Element4";
 
@@ -77,21 +77,21 @@ public class ExampleTest {
     }
 
     @Test
-    public void revertirCadena() {
+    public void testRevertirCadena() {
         String string = "cat";
         String result = example.revertirCadena(string);
         assertEquals("tac",result);
     }
         
     @Test
-    public void factorial() {
+    public void testFactorial() {
         int number = 3;
         long result = example.factorial(number);
         assertEquals(6,result);
     }
 
     @Test
-    public void factorialNegativeNumber() {
+    public void testFactorialNegativeNumber() {
         int number = -4;
         assertThrows(IllegalArgumentException.class, () -> {
             example.factorial(number);
@@ -99,24 +99,36 @@ public class ExampleTest {
     }
 
     @Test
-    public void esPrimo() {
+    public void testEsPrimo() {
         int number = 5;
         boolean result = example.esPrimo(number);
         assertTrue(result);
     }
 
     @Test
-    public void esPrimoNegativeNumber() {
+    public void testEsPrimoNegativeNumber() {
         int number = -5;
         boolean result = example.esPrimo(number);
         assertFalse(result);
     }
 
     @Test
-    public void noEsPrimoBiggerTahnFour(){
+    public void testNoEsPrimoBiggerThanFour(){
         int number = 6;
         boolean result = example.esPrimo(number);
         assertFalse(result);
+    }
+
+    @Test
+    public void testMensajeConRetraso() throws InterruptedException {
+        
+        long start = System.currentTimeMillis();
+        String result = example.mensajeConRetraso();
+        long end = System.currentTimeMillis();
+        long duracion = end - start;
+
+        assertEquals("Listo después de retraso", result);
+        assertTrue(duracion >= 5000);
     }
 
 }
