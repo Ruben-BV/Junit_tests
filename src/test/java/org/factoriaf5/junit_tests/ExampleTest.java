@@ -99,15 +99,22 @@ public class ExampleTest {
     }
 
     @Test
-    public void esprimo() {
+    public void esPrimo() {
         int number = 5;
         boolean result = example.esPrimo(number);
         assertTrue(result);
     }
 
     @Test
-    public void esprimoNegativeNumber() {
+    public void esPrimoNegativeNumber() {
         int number = -5;
+        boolean result = example.esPrimo(number);
+        assertFalse(result);
+    }
+
+    @Test
+    public void noEsPrimoBiggerTahnFour(){
+        int number = 6;
         boolean result = example.esPrimo(number);
         assertFalse(result);
     }
