@@ -105,4 +105,11 @@ public class ExampleTest {
         assertTrue(result);
     }
 
+    @Test
+    public void esprimoNegativeNumber() {
+        int number = -5;
+        boolean result = example.esPrimo(number);
+        assertFalse(result);
+    }
+
 }
