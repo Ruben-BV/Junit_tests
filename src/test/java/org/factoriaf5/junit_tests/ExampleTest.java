@@ -83,6 +83,11 @@ public class ExampleTest {
         assertEquals("tac",result);
     }
         
-    
+    @Test
+    public void factorial() {
+        int number = 3;
+        long result = example.factorial(number);
+        assertEquals(6,result);
+    }
 
 }
