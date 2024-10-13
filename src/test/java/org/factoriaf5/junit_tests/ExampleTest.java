@@ -141,4 +141,11 @@ public class ExampleTest {
         assertEquals(expected, result);
     }
 
+    @Test
+    public void testCalcularMedia() {
+        List<Integer> list = Arrays.asList(2,5,11);
+        double result = example.calcularMedia(list);
+        assertEquals(6, result);
+    }
+
 }
