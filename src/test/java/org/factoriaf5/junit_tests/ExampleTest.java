@@ -37,4 +37,16 @@ public class ExampleTest {
         assertInstanceOf(Integer.class, result);
         
     }
+
+    @Test
+    public void checkPositivo() {
+
+        int number = 5;
+
+        boolean result = example.checkPositivo(number);
+
+        assertTrue(result);
+
+    }
+
 }
