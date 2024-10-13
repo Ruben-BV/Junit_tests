@@ -1,14 +1,10 @@
 package org.factoriaf5.junit_tests;
 
 import static org.junit.jupiter.api.Assertions.*;
-
-import org.apache.tomcat.util.digester.ArrayStack;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 
