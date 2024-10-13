@@ -170,10 +170,9 @@ public class ExampleTest {
         String result = example.convertirListaAString(list);
         assertEquals("1,2,3", result);
     }
-    
 
     @Test
-    public void testConvertirListaAString2() {
+    public void testConvertirListaAStringNull() {
         List<String> list = Arrays.asList("1",null,"3");
         String result = example.convertirListaAString(list);
         assertEquals("1,NULL,3", result);
