@@ -2,15 +2,13 @@ package org.factoriaf5.junit_tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+// import org.apache.tomcat.util.digester.ArrayStack;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-// import org.junit.jupiter.api.BeforeEach;
-
-// import java.util.Arrays;
+import java.util.Arrays;
 // import java.util.Collections;
-// import java.util.List;
+import java.util.List;
 
 
 public class ExampleTest {
@@ -60,5 +58,16 @@ public class ExampleTest {
         int result = example.contarLetrasA(string);
         assertEquals(2, result);
     }
+
+    @Test
+    public void contieneElemento() {
+        List<String> list = Arrays.asList("Element1", "Element2", "Element3");
+        String element = "Element2";
+        
+        // Verificar que el elemento está en la lista
+        assertTrue(example.contieneElemento(list, element));
+        }
+        
+    
 
 }
