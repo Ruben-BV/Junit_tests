@@ -65,7 +65,7 @@ public class ExampleTest {
     }
 
     @Test
-    public void testContieneElementoFalse() {
+    public void testContieneElementoFalso() {
         List<String> list = Arrays.asList("Element1", "Element2", "Element3");
         String element = "Element4";
 
@@ -88,7 +88,7 @@ public class ExampleTest {
     }
 
     @Test
-    public void testFactorialNegativeNumber() {
+    public void testFactorialNumeroNegativo() {
         int number = -4;
         assertThrows(IllegalArgumentException.class, () -> {
             example.factorial(number);
@@ -103,14 +103,14 @@ public class ExampleTest {
     }
 
     @Test
-    public void testEsPrimoNegativeNumber() {
+    public void testEsPrimoNumeroNegativo() {
         int number = -5;
         boolean result = example.esPrimo(number);
         assertFalse(result);
     }
 
     @Test
-    public void testNoEsPrimoBiggerThanFour(){
+    public void testNoEsPrimoMayorQueCuatro(){
         int number = 6;
         boolean result = example.esPrimo(number);
         assertFalse(result);
